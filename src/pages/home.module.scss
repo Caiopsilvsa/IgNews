@@ -1,0 +1,28 @@
+
+.container{
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    margin: 0 auto;
+    padding:0 3rem;
+}
+
+.content{
+   
+    h1{
+        font-size: 3.5rem;
+    }
+
+   
+}
+
+
+.React{
+    font-weight: bold;
+    color:var(--cyan-500);
+}
+
+.ReactPrice{
+    color:var(--cyan-500);
+}

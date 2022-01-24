@@ -1,0 +1,11 @@
+*yarn add react-icons
+ react-icons/fa
+
+height:3rem;
+border-radius:3rem;
+background: #1f2729;
+border:0;
+padding: 0 1.5rem;
+display:flex
+
+color="#eba417" 
