@@ -1,0 +1,40 @@
+*******Autenticação com NextAuth******
+
+Documentação oficial: https://next-auth.js.org/getting-started/example
+
+instale o nextauth: yarn add next-auth
+
+cole o codigo:
+import NextAuth from "next-auth"
+import GithubProvider from "next-auth/providers/github"
+
+export default NextAuth({
+  // Configure one or more authentication providers
+  providers: [
+    GithubProvider({
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_SECRET,
+    }),
+    // ...add more providers here
+  ],
+})
+
+Vá no github e crie uma OauthAplicattion, e coloque o endereço que está o arquivo de configuração, exemplo: http://localhost:3000/pages/api/auth/callback
+
+No arquivo .env.local cole o client id e o client secret, exemplo:
+GITHUB_CLIENT_ID=9dbb5573b9f63d09fac9
+GITHUB_CLIENT_SECRET=8fa3483d8e7d4e1c8b054d1bf815b5d1f84ca6de
+
+
+colque o scope, exemplo:
+authorization: {
+        params: {
+          scope: 'read:user',
+        },
+      },
+    }),
+  ]})
+
+No arquivo que contém o botão, importe: {signIn,useSession} from 'next-auth/react';
+Para ter informações da sessão do usuário, coloque: 
+const {data:session} = useSession(); 

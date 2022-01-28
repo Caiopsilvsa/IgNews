@@ -1,0 +1,12 @@
+Estratégias de autenticação:
+
+
+JWT (Storage):
+  Gerado a partir do back-end
+
+Next Auth ():
+  Login Social(Google, GitHub) para casos mais simples. Também utilizado quando não queremos salvar as credencias do usuário no back-end(Serveless)
+
+Cognito,Auth0:
+  Autenticação as a service
+ 
